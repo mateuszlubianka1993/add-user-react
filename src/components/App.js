@@ -1,10 +1,15 @@
 import React from 'react';
+import Header from './Header';
+import AddUserForm from './AddUserForm';
 
 class App extends React.Component {
 
     render() {
         return(
-            <div>App</div>
+            <div className="app-container">
+                <Header />
+                <AddUserForm />
+            </div>
         );
     };
 };
