@@ -3,7 +3,7 @@ import React from 'react';
 const User = (props) => {
     
     return(
-        <div className="item">
+        <div className="item" key={props.index}>
             <div className="ui tiny image">
                 <img alt="avatar" src={props.user.avatar}/>
             </div>
@@ -22,6 +22,7 @@ const User = (props) => {
                         </div>
                     </div>
                 </div>
+                <button onClick={props.deleteUser.bind(this, props.user)} className="ui red button">Delete</button>
             </div>
         </div>
     );

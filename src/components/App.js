@@ -54,6 +54,12 @@ class App extends React.Component {
         this.setState({users: []})
     };
 
+    deleteUser = (index) => {
+        this.setState(updatedUsers => ({
+          users: updatedUsers.users.filter(user => user !== index )
+        }));
+      };
+
     render() {
         return(
             <div className="app-container">
@@ -64,7 +70,9 @@ class App extends React.Component {
                     onInputIpChange={this.onInputIpChange}
                     addNewUser={this.addNewUser}
                     removeUsersList={this.removeUsersList}/>
-                <UsersList users={this.state.users}/>
+                <UsersList 
+                    users={this.state.users}
+                    deleteUser={this.deleteUser}/>
             </div>
         );
     };
