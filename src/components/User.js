@@ -1,22 +1,24 @@
 import React from 'react';
+import faker from 'faker';
 
 const User = (props) => {
+    const avatar = faker.image.avatar();
     return(
-        <div class="item">
-            <div class="ui tiny image">
-                {/* <img src="/images/avatar/large/stevie.jpg"> */}
+        <div className="item">
+            <div className="ui tiny image">
+                <img alt="avatar" src={avatar}/>
             </div>
-            <div class="content">
-                <div class="header">Nick: {props.user.nick}</div>
-                <div class="description">
-                    <div class="ui raised segments">
-                        <div class="ui segment">
+            <div className="content">
+                <div className="header">Nick: {props.user.nick}</div>
+                <div className="description">
+                    <div className="ui raised segments">
+                        <div className="ui segment">
                             <p>Email: {props.user.email}</p>
                         </div>
-                        <div class="ui segment">
+                        <div className="ui segment">
                             <p>IP Address: {props.user.ip}</p>
                         </div>
-                        <div class="ui segment">
+                        <div className="ui segment">
                             <p>Date: </p>
                         </div>
                     </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+// import faker from 'faker';
 import Header from './Header';
 import AddUserForm from './AddUserForm';
 import UsersList from './UsersList';
@@ -33,7 +34,8 @@ class App extends React.Component {
         let user = {
             nick: this.state.thatNick,
             email: this.state.thatEmail,
-            ip: this.state.thatIp
+            ip: this.state.thatIp,
+            // avatar: faker.image.avatar()
         };
         
         this.setState({
