@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import AddUserForm from './AddUserForm';
+import UsersList from './UsersList';
 
 class App extends React.Component {
     constructor(props) {
@@ -29,10 +30,12 @@ class App extends React.Component {
     addNewUser = (e) => {
         e.preventDefault();
         // console.log('it works!');
-        let user = new Object();
-        user.nick = this.state.thatNick;
-        user.email = this.state.thatEmail;
-        user.ip = this.state.thatIp;
+        let user = {
+            nick: this.state.thatNick,
+            email: this.state.thatEmail,
+            ip: this.state.thatIp
+        };
+        
         this.setState({
             thatNick: '',
             thatEmail: '',
@@ -51,6 +54,7 @@ class App extends React.Component {
                     onInputEmailChange={this.onInputEmailChange}
                     onInputIpChange={this.onInputIpChange}
                     addNewUser={this.addNewUser}/>
+                <UsersList users={this.state.users}/>
             </div>
         );
     };
