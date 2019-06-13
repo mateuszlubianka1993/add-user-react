@@ -4,7 +4,7 @@ class AddUserForm extends React.Component {
     render() {
         return(
             <div className="add-user-form-container">
-                <form className="add-user-form ui form">
+                <form onSubmit={this.props.addNewUser} className="add-user-form ui form">
                     <div className="field">
                         <label>Nickname</label>
                         <input onChange={this.props.onInputNickChange} type="text" name="nick" placeholder="Nickname" required />
