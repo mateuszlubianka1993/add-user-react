@@ -19,7 +19,7 @@ const User = (props) => {
                             <p>IP Address: {props.user.ip}</p>
                         </div>
                         <div className="ui segment">
-                            <p>Date: </p>
+                            <p>Date: {props.user.createtime}</p>
                         </div>
                     </div>
                 </div>

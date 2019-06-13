@@ -1,5 +1,4 @@
 import React from 'react';
-// import faker from 'faker';
 import Header from './Header';
 import AddUserForm from './AddUserForm';
 import UsersList from './UsersList';
@@ -31,11 +30,12 @@ class App extends React.Component {
     addNewUser = (e) => {
         e.preventDefault();
         // console.log('it works!');
+        const today = new Date().toLocaleString();
         let user = {
             nick: this.state.thatNick,
             email: this.state.thatEmail,
             ip: this.state.thatIp,
-            // avatar: faker.image.avatar()
+            createtime: today
         };
         
         this.setState({
