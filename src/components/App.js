@@ -50,6 +50,10 @@ class App extends React.Component {
         // console.log(this.state.users);
     };
 
+    removeUsersList = () => {
+        this.setState({users: []})
+    };
+
     render() {
         return(
             <div className="app-container">
@@ -58,7 +62,8 @@ class App extends React.Component {
                     onInputNickChange={this.onInputNickChange}
                     onInputEmailChange={this.onInputEmailChange}
                     onInputIpChange={this.onInputIpChange}
-                    addNewUser={this.addNewUser}/>
+                    addNewUser={this.addNewUser}
+                    removeUsersList={this.removeUsersList}/>
                 <UsersList users={this.state.users}/>
             </div>
         );

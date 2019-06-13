@@ -35,7 +35,7 @@ class AddUserForm extends React.Component {
                     <button onClick={clear} className="positive ui button" type="submit">Add User</button>
                 </form>
                 <div className="delete-list-container">
-                    <button className="negative ui button">Remove List</button>
+                    <button onClick={this.props.removeUsersList} className="negative ui button">Remove List</button>
                 </div>
             </div>
         );
