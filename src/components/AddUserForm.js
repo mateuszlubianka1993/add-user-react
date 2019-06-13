@@ -5,22 +5,22 @@ class AddUserForm extends React.Component {
         return(
             <div className="add-user-form-container">
                 <form className="add-user-form ui form">
-                    <div class="field">
+                    <div className="field">
                         <label>Nickname</label>
-                        <input type="text" name="nick" placeholder="Nickname" required />
+                        <input onChange={this.props.onInputNickChange} type="text" name="nick" placeholder="Nickname" required />
                     </div>
-                    <div class="field">
+                    <div className="field">
                         <label>E-mail</label>
-                        <input type="email" placeholder="your@email.com" required/>
+                        <input onChange={this.props.onInputEmailChange} type="email" placeholder="your@email.com" required/>
                     </div>
-                    <div class="field">
+                    <div className="field">
                         <label>IP Address</label>
-                        <input type="text" name="ip-address" placeholder="xxx.xxx.xxx.xx" pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" required/>
+                        <input onChange={this.props.onInputIpChange} type="text" name="ip-address" placeholder="xxx.xxx.xxx.xx" pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" required/>
                     </div>
-                    <button class="positive ui button" type="submit">Add User</button>
+                    <button className="positive ui button" type="submit">Add User</button>
                 </form>
                 <div className="delete-list-container">
-                    <button class="negative ui button">Remove List</button>
+                    <button className="negative ui button">Remove List</button>
                 </div>
             </div>
         );
