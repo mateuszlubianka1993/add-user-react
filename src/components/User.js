@@ -1,12 +1,11 @@
 import React from 'react';
-import faker from 'faker';
 
 const User = (props) => {
-    const avatar = faker.image.avatar();
+    
     return(
         <div className="item">
             <div className="ui tiny image">
-                <img alt="avatar" src={avatar}/>
+                <img alt="avatar" src={props.user.avatar}/>
             </div>
             <div className="content">
                 <div className="header">Nick: {props.user.nick}</div>
