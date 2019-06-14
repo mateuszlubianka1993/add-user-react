@@ -69,7 +69,8 @@ class App extends React.Component {
                     onInputEmailChange={this.onInputEmailChange}
                     onInputIpChange={this.onInputIpChange}
                     addNewUser={this.addNewUser}
-                    removeUsersList={this.removeUsersList}/>
+                    removeUsersList={this.removeUsersList}
+                    users={this.state.users}/>
                 <UsersList 
                     users={this.state.users}
                     deleteUser={this.deleteUser}/>
