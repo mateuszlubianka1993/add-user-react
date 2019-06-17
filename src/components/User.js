@@ -1,9 +1,10 @@
 import React from 'react';
+import './styles/User.css';
 
 const User = (props) => {
     
     return(
-        <div className="item" key={props.index}>
+        <div className="item user-container" key={props.index}>
             <div className="ui tiny image">
                 <img alt="avatar" src={props.user.avatar}/>
             </div>

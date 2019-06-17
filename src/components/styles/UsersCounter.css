@@ -5,6 +5,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 3px solid #277047;
+    border-left: 0;
 }
 .counter {
     height: 150px;
@@ -21,4 +23,5 @@
     color: 	#277047;
     font-size: 42px;
     margin-left: 15px;
+    text-transform: uppercase;
 }
