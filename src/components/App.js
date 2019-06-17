@@ -3,6 +3,7 @@ import faker from 'faker';
 import Header from './Header';
 import AddUserForm from './AddUserForm';
 import UsersList from './UsersList';
+import UsersCounter from './UsersCounter';
 
 class App extends React.Component {
     constructor(props) {
@@ -71,6 +72,7 @@ class App extends React.Component {
                     addNewUser={this.addNewUser}
                     removeUsersList={this.removeUsersList}
                     users={this.state.users}/>
+                <UsersCounter users={this.state.users}/>
                 <UsersList 
                     users={this.state.users}
                     deleteUser={this.deleteUser}/>
