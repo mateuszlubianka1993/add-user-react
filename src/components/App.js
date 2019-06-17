@@ -4,6 +4,7 @@ import Header from './Header';
 import AddUserForm from './AddUserForm';
 import UsersList from './UsersList';
 import UsersCounter from './UsersCounter';
+import './styles/App.css';
 
 class App extends React.Component {
     constructor(props) {
@@ -65,14 +66,16 @@ class App extends React.Component {
         return(
             <div className="app-container">
                 <Header />
-                <AddUserForm 
-                    onInputNickChange={this.onInputNickChange}
-                    onInputEmailChange={this.onInputEmailChange}
-                    onInputIpChange={this.onInputIpChange}
-                    addNewUser={this.addNewUser}
-                    removeUsersList={this.removeUsersList}
-                    users={this.state.users}/>
-                <UsersCounter users={this.state.users}/>
+                <div className="form-counter-container">
+                    <AddUserForm 
+                        onInputNickChange={this.onInputNickChange}
+                        onInputEmailChange={this.onInputEmailChange}
+                        onInputIpChange={this.onInputIpChange}
+                        addNewUser={this.addNewUser}
+                        removeUsersList={this.removeUsersList}
+                        users={this.state.users}/>
+                    <UsersCounter users={this.state.users}/>
+                </div>
                 <UsersList 
                     users={this.state.users}
                     deleteUser={this.deleteUser}/>

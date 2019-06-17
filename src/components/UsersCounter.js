@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/UsersCounter.css';
 
 const UsersCounter = (props) => {
     let howManyUsers = props.users.length;

@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/AddUserForm.css';
 
 class AddUserForm extends React.Component {
     constructor(props) {
@@ -38,11 +39,12 @@ class AddUserForm extends React.Component {
                         <label>IP Address</label>
                         <input onChange={this.props.onInputIpChange} ref={this.ipRef} type="text" name="ip-address" placeholder="xxx.xxx.xxx.xx" pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" required/>
                     </div>
-                    <button onClick={clear} className="positive ui button" type="submit">Add User</button>
+                    <div className="btn-container">
+                        <button onClick={clear} className="positive ui button" type="submit">Add User</button>
+                        {deleteBtn()}
+                    </div>
                 </form>
-                <div className="delete-list-container">
-                    {deleteBtn()}
-                </div>
+                
             </div>
         );
     };
