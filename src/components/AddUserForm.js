@@ -6,7 +6,6 @@ class AddUserForm extends React.Component {
         this.nickRef = React.createRef();
         this.mailRef = React.createRef();
         this.ipRef = React.createRef();
-        this.deleteBtnRef = React.createRef();
     };
 
     render() {
@@ -20,7 +19,7 @@ class AddUserForm extends React.Component {
 
         const deleteBtn = () => {
             if(this.props.users.length!==0) {
-                return(<button onClick={this.props.removeUsersList} ref={this.deleteBtnRef} className="negative ui button">Remove List</button>);
+                return(<button onClick={this.props.removeUsersList} className="negative ui button">Remove List</button>);
             };
         };
 
