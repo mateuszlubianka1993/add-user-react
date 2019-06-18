@@ -19,20 +19,16 @@ class App extends React.Component {
 
     onInputNickChange = (e) => {
         this.setState({thatNick: e.target.value});
-        // console.log(this.state.thatNick);
     };
     onInputEmailChange = (e) => {
         this.setState({thatEmail: e.target.value});
-        // console.log(this.state.thatEmail);
     };
     onInputIpChange = (e) => {
         this.setState({thatIp: e.target.value});
-        // console.log(this.state.thatIp);
     };
 
     addNewUser = (e) => {
         e.preventDefault();
-        // console.log('it works!');
         const avatar = faker.image.avatar();
         const today = new Date().toLocaleString();
         let user = {
@@ -49,7 +45,6 @@ class App extends React.Component {
             thatEmail: '',
             thatIp: '',
           });
-        // console.log(this.state.users);
     };
 
     removeUsersList = () => {

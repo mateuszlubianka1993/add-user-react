@@ -35,7 +35,6 @@ class AddUserForm extends React.Component {
                 this.props.removeUsersList();
                 this.setState({tryRemove: false});
             }
-            // console.log(x.target.getAttribute("data-x"));
         };
         
         const pop = () => {
