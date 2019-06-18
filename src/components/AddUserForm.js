@@ -7,6 +7,9 @@ class AddUserForm extends React.Component {
         this.nickRef = React.createRef();
         this.mailRef = React.createRef();
         this.ipRef = React.createRef();
+        this.state={
+            tryRemove: false
+        }
     };
 
     render() {
@@ -18,9 +21,43 @@ class AddUserForm extends React.Component {
             },200)
         };
 
+        const areYouSure = (e) => {
+            e.preventDefault();
+            this.setState({tryRemove: true});
+            
+        };
+
+        const yesOrNo = (x) => {
+            if(x.target.getAttribute("data-x")==="no") {
+                this.setState({tryRemove: false});
+            }
+            if(x.target.getAttribute("data-x")==="yes") {
+                this.props.removeUsersList();
+                this.setState({tryRemove: false});
+            }
+            // console.log(x.target.getAttribute("data-x"));
+        };
+        
+        const pop = () => {
+            if(this.state.tryRemove) {
+                return(
+                    <div className="pop-bg">
+                        <div className="pop">
+                            <p>Are you sure?</p>
+                            <div className="ui buttons">
+                                <button onClick={yesOrNo} data-x="yes" className="ui button">Yes</button>
+                                <div className="or"></div>
+                                <button onClick={yesOrNo} data-x="no" className="ui positive button">No</button>
+                            </div>
+                        </div>
+                    </div>
+                );
+            };
+        };
+
         const deleteBtn = () => {
             if(this.props.users.length!==0) {
-                return(<button onClick={this.props.removeUsersList} className="negative ui button">Remove List</button>);
+                return(<button onClick={areYouSure} className="negative ui button">Remove List</button>);
             };
         };
 
@@ -44,16 +81,7 @@ class AddUserForm extends React.Component {
                         {deleteBtn()}
                     </div>
                 </form>
-                <div className="pop-bg">
-                    <div className="pop">
-                        <p>Are you sure?</p>
-                        <div className="ui buttons">
-                            <button className="ui button">Yes</button>
-                            <div className="or"></div>
-                            <button className="ui positive button">No</button>
-                        </div>
-                    </div>
-                </div>
+                {pop()}
             </div>
         );
     };
