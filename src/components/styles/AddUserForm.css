@@ -10,3 +10,29 @@
 .add-user-form-container input {
     background-color: #f2fbdc !important;
 }
+.pop-bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pop {
+    width: 450px;
+    height: 300px;
+    background-color: #e8d988;
+    border: 5px solid #277047;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.pop p {
+    font-size: 38px;
+    color: #277047;
+}

@@ -44,7 +44,16 @@ class AddUserForm extends React.Component {
                         {deleteBtn()}
                     </div>
                 </form>
-                
+                <div className="pop-bg">
+                    <div className="pop">
+                        <p>Are you sure?</p>
+                        <div className="ui buttons">
+                            <button className="ui button">Yes</button>
+                            <div className="or"></div>
+                            <button className="ui positive button">No</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     };

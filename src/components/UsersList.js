@@ -10,7 +10,9 @@ class UsersList extends React.Component {
         const listOfUsers = this.props.users.map((user, index)=><User user={user} key={index} deleteUser={this.deleteUser.bind(this, user)} index={index}/>)
 
         return(
-            <div className="ui items container">{listOfUsers}</div>
+            <div className="ui items container">
+                    {listOfUsers}
+            </div>
         );
     };
 };
