@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 > Hi everyone! This is my version of simple Add User React App. 
 
 ## Live
-https://mateuszlubianka1993.github.io/to-do-list-2/
+https://mateuszlubianka1993.github.io/add-user-react/
 
 ## Technologies:
 * React
